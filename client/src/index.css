@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-Syne;
+}
+
+.react-tel-input .special-label {
+    display: none !important;
+  }

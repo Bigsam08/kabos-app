@@ -1,0 +1,33 @@
+.loader-container {
+    background: transparent;
+    height: 100vh;
+    color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Syne, serif;
+    z-index: 9999;
+}
+.loader-container h1, .loader-container p, .load-icon{
+    animation: float 3s infinite ease-in-out;
+}
+
+.animated {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border: 10px solid teal;
+    border-radius: 50%;
+    border-color: transparent teal;
+    animation: rotator 1s linear infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);   
+    }
+}
