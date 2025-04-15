@@ -26,7 +26,6 @@ const Dashboard = () => {
 
         {/**  main content the body display */}
         <div className="flex-1 bg-gray-100 p-6 overflow-hidden">
-          <h1> MAIN ACTIVITIES GOES HERE</h1>
           <Routes>
             <Route path="/" element={<DashboardHome />} />
             <Route path="settings" element={<DashboardSettings />} />

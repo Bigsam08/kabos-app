@@ -1,25 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [ "./src/**/*.{js,jsx,ts,tsx}",],
+  content: [
+    './src/**/*.{html,js,jsx,ts,tsx}',  // Adjust these paths to your project structure
+  ],
   theme: {
     extend: {
-      animation: ['responsive', 'customBounce 1s ease out infinite'],
-      fontFamily: {
-        Syne: ['Syne', 'sans-serif'],
+      animation: {
+        shine: 'shine 1.5s infinite ease-in-out',
       },
-      keyframes : {
-        customBounce : {
-          '0%, 100%': { transform : 'translateY(-50px)' },
-          '50%' : {transform: 'translateY(0)'}
-        },
+      keyframes: {
+        shine: {
+          '0%': { left: '-75%' },
+          '100%': { left: '125%' },
+        }
+      },
+      fontFamily: {
+        sans: ['Syne', 'Roboto', 'sans-serif'], // Default sans-serif font family
+        // You can add other fonts if needed
       },
       width : {
         '300' : '300px',
         '400' : '400px'
-      }
-     
+      },
+      
     },
   },
-  plugins: ["daisyui"],
-}
-
+  plugins: [],
+};

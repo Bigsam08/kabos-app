@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authStore from "../Store/auth.store";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaArrowLeft } from "react-icons/fa";
 
 const Login = () => {
   // set an empty object to get user input
@@ -39,6 +39,13 @@ const Login = () => {
   // return jsx
   return (
     <div className="flex items-center w-full h-screen bg-gradient-to-r from-black to-purple-900">
+      <div className="absolute gap-3 top-5 sm:left-10 p-3 hover:border-2 border-white rounded-xl transition ease-in-out duration-500 ">
+        <Link to="/" className=" flex items-center gap-3">
+          {" "}
+          <FaArrowLeft className="text-white sm:text-2xl" />
+          <p className=" text-white"> back Home </p>
+        </Link>
+      </div>
       <div className="bg-white p-6 w-300 sm:w-400 mx-auto">
         <h1 className="text-2xl mb-8"> Sign Into your account</h1>
         {/** login form box---------------------- */}
@@ -46,6 +53,7 @@ const Login = () => {
           <label htmlFor="email">Email</label>
           <FaEnvelope className="absolute top-12 left-2" />
           <input
+            id="email"
             name="email"
             type="email"
             placeholder="enter your email"
@@ -56,6 +64,7 @@ const Login = () => {
           <label htmlFor="password">Password</label>
           <FaLock className="absolute top-36 left-2" />
           <input
+            id="password"
             name="password"
             type="password"
             placeholder="enter your password..."
@@ -64,13 +73,13 @@ const Login = () => {
             className="px-7 py-4 border-solid border-2 mb-5 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <Link
-            to="/"
+            to="/forget-password"
             className="text-end mb-5 hover:underline text-purple-800"
           >
             {" "}
             forget Password
           </Link>
-          <button className="bg-purple-800 py-4 hover:bg-purple-400 mb-5">
+          <button type="submit" className="bg-purple-800 py-4 hover:bg-purple-400 mb-5">
             {" "}
             Log In{" "}
           </button>{" "}

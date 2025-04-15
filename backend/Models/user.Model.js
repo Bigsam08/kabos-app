@@ -42,6 +42,14 @@ const userSchema = new mongoose.Schema({
     accountNumber : {
         type : String,
         index : true
+    },
+    resetToken : {
+        type : String,
+        default : null
+    },
+    tokenExpiry : {
+        type : Date,
+        default : null
     }
 },
 {timestamps : true})

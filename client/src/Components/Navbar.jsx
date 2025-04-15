@@ -36,7 +36,7 @@ const Navbar = () => {
             Company{" "}
             <FaChevronDown className="transition-transform duration-200 group-hover:rotate-180" />{" "}
           </div>
-          <ul className="absolute top-full hidden group-hover:block bg-white w-36 shadow-md text-purple-700 text-center space-y-2  p-2 z-10">
+          <ul className="absolute top-full hidden group-hover:block bg-white w-40 shadow-md text-purple-700 space-y-2  p-2 z-10">
             <li>
               {" "}
               <Link
@@ -75,7 +75,7 @@ const Navbar = () => {
             Our Services{" "}
             <FaChevronDown className="transition-transform duration-200 group-hover:rotate-180" />{" "}
           </div>
-          <ul className="absolute top-full left-0  hidden group-hover:block bg-white text-purple-700 p-2  shadow-md space-y-2 w-40 text-center z-20">
+          <ul className="absolute top-full left-0  hidden group-hover:block bg-white text-purple-700 p-2  shadow-md space-y-2 w-48  z-20">
             <li>
               {" "}
               <Link
@@ -105,7 +105,7 @@ const Navbar = () => {
             Help{" "}
             <FaChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
           </div>
-          <div className="absolute top-full left-0  hidden group-hover:block bg-white text-purple-700 p-2  shadow-md space-y-2 w-32 text-center z-20">
+          <div className="absolute top-full left-0  hidden group-hover:block bg-white text-purple-700 p-2  shadow-md space-y-2 w-48  z-20">
             <ul className="p-2 space-y-2">
               <li>
                 {" "}
@@ -143,7 +143,7 @@ const Navbar = () => {
       </ul>
 
       {/** ----------------------button-----------------------------*/}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Link
           to="/login"
           className="btn bg-yellow-300 text-purple-800  py-2  px-4  hover:bg-yellow-200 transition-all"
@@ -183,7 +183,7 @@ const Navbar = () => {
     <div className="pt-4">
       <Link
         to="/login"
-        className="border-2  hover:bg-yellow-400 px-4 py-2 rounded-sm hover:text-purple-500 transition-all" 
+        className="border-2  hover:bg-yellow-400 px-4 py-2 rounded-sm hover:text-purple-500 transition-all ease-out duration-500" 
       >
         Log In
       </Link>
